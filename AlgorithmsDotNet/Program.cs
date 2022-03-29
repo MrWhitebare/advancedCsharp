@@ -1,6 +1,7 @@
-﻿using System;
+﻿using AlgorithmsDotNet.Utils;
+using System;
 
-namespace Algorithms
+namespace AlgorithmsDotNet
 {
     class Program
     {
@@ -15,8 +16,19 @@ namespace Algorithms
             //int[] newArray = algorithms.SelectSortArray(my_array);
             for (int i = 0; i < newArray.Length; i++)
             {
-                Console.Write(newArray[i].ToString()+"\t");
+                Console.Write(newArray[i].ToString() + "\t");
             }
+
+
+            //递归
+            algorithms.CountDown(10);
+            //阶乘
+            int fac = algorithms.Factorial(7);
+            Console.WriteLine("7的阶乘结果是:{0}", fac);
+
+            //汉诺塔
+            algorithms.HanoiTower(3, "A塔", "B塔", "C塔");
+
             Console.ReadKey();
         }
     }

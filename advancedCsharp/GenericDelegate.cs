@@ -22,7 +22,7 @@ namespace advancedCsharp
         {
             return num;
         }
-        public static void Main(string[] args)
+        /*public static void Main(string[] args)
         {
             NumberChanger<int> numberChanger1 = new NumberChanger<int>(AddNum);
             NumberChanger<int> numberChanger2 = new NumberChanger<int>(MultNum);
@@ -32,6 +32,6 @@ namespace advancedCsharp
             numberChanger2(5);
             Console.WriteLine("Value of Num: {0}", getNum());
             Console.ReadKey();
-        }
+        }*/
     }
 }

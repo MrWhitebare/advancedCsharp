@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.1758
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "advancedCsharp", "advancedCsharp\advancedCsharp.csproj", "{1907824A-D618-4068-9925-9FB4430A868F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms1", "Algorithms\Algorithms1.csproj", "{13BF526B-D422-4A97-8EC4-8C67928EFFEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsDotNet", "AlgorithmsDotNet\AlgorithmsDotNet.csproj", "{D493ED8C-3982-4628-A9C3-F00638376612}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{1907824A-D618-4068-9925-9FB4430A868F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1907824A-D618-4068-9925-9FB4430A868F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1907824A-D618-4068-9925-9FB4430A868F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13BF526B-D422-4A97-8EC4-8C67928EFFEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13BF526B-D422-4A97-8EC4-8C67928EFFEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13BF526B-D422-4A97-8EC4-8C67928EFFEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13BF526B-D422-4A97-8EC4-8C67928EFFEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D493ED8C-3982-4628-A9C3-F00638376612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D493ED8C-3982-4628-A9C3-F00638376612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D493ED8C-3982-4628-A9C3-F00638376612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D493ED8C-3982-4628-A9C3-F00638376612}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
 ﻿using AlgorithmsDotNet.Utils;
+using System.Collections.Generic;
 using System;
 
 namespace AlgorithmsDotNet
@@ -28,6 +29,18 @@ namespace AlgorithmsDotNet
 
             //汉诺塔
             algorithms.HanoiTower(3, "A塔", "B塔", "C塔");
+
+            int count = algorithms.RecursiveSum(new List<int>() { 15, 0, 10, 50, 55, 35, 15, 20 }),
+                max=algorithms.RecursiveMax(new List<int>() { 15, 0, 10, 50, 55, 35, 15, 20 });
+
+            Console.WriteLine($"数组之和:{count},最大值:{max}");
+
+            Console.WriteLine("----QuickSort----");
+            List<int> sortArray = algorithms.QuickSort(new List<int>() { 15, 0, 10, 50, 55, 35, 15, 20 });
+            foreach (int item in sortArray)
+            {
+                Console.Write($"{item} ");
+            }
 
             Console.ReadKey();
         }

@@ -72,7 +72,6 @@ namespace AlgorithmsDotNet.Utils
                 {
                     arrayList.Add(Convert.ToInt32(iArray[i]));
                 }
-                else continue;
             }
             int[] newArray = new int[arrayList.Count];
             int j = 0;
@@ -151,6 +150,13 @@ namespace AlgorithmsDotNet.Utils
             Console.WriteLine("{0}===>{1}", x, y);
         }
 
+        /// <summary>
+        /// 汉诺塔递归
+        /// </summary>
+        /// <param name="dishCount">圆盘数</param>
+        /// <param name="a">A柱</param>
+        /// <param name="b">B柱</param>
+        /// <param name="c">C柱</param>
         public static void HanoiTower(int dishCount, string a, string b, string c)
         {
             if (dishCount == 1)
@@ -166,6 +172,79 @@ namespace AlgorithmsDotNet.Utils
                 //将B柱上的n-1个盘子借助A柱移向C柱
                 HanoiTower(dishCount - 1, b, a, c);
             }
+        }
+
+        /// <summary>
+        /// 递归求数组之和
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        public static int RecursiveSum(List<int> args)
+        {
+            if (args.Count == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                int currentEle = args[0];
+                args.RemoveAt(0);
+                //删除匹配的第一个元素
+                //args.Remove(0);
+                return currentEle + RecursiveSum(args);
+            }
+        }
+
+        /// <summary>
+        /// 递归获取List最大值
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        public static int RecursiveMax(List<int> args)
+        {
+            if (args.Count == 0)
+                return 0;
+            if (args.Count == 1)
+                return args[0];
+            else
+            {
+                int currentItem = args[0];
+                args.RemoveAt(0);
+                int sub_max=RecursiveMax(args);
+                return currentItem > sub_max ? currentItem : sub_max;
+            }
+        }
+
+        /// <summary>
+        /// 快速排序
+        /// </summary>
+        /// <param name="args">待排序数组</param>
+        /// <returns></returns>
+        public static List<int> QuickSort(List<int> args)
+        {
+            if (args.Count < 2)
+            {
+                return args;
+            }
+            int pivot = args[0];
+            //移除基准值
+            args.RemoveAt(0);
+
+            List<int> less = new List<int>(),//小于基准值的区间
+                      greater = new List<int>(),//大于基准值的区间
+                      result =new List<int>();//结果区间
+            foreach (int item in args)
+            {
+                if (pivot >= item)
+                    less.Add(item);
+                else
+                    greater.Add(item);
+            }
+
+            result.AddRange(QuickSort(less));
+            result.Add(pivot);
+            result.AddRange(QuickSort(greater));
+            return result;
         }
     }
 }
